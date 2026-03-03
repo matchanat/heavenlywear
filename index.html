@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavenly Wear | Premium Hijab & Style Recommendation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .product-card:hover img { transform: scale(1.08); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade { animation: fadeIn 0.6s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="sticky top-0 z-50 glass-nav border-b border-pink-100 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-pink-600 italic tracking-tighter">Heavenly Wear</h1>
+            <div class="space-x-8 hidden md:flex font-semibold text-sm uppercase tracking-widest text-slate-600">
+                <a href="#katalog" class="hover:text-pink-500 transition">Katalog</a>
+                <a href="#rekomendasi" class="hover:text-pink-500 transition">Cek Gaya</a>
+                <a href="#edukasi" class="hover:text-pink-500 transition">Tutorial</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-24 text-center bg-gradient-to-b from-pink-50 to-slate-50 px-4">
+        <div class="animate-fade">
+            <span class="bg-pink-100 text-pink-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">Elegance in Every Layer</span>
+            <h2 class="text-5xl md:text-7xl font-extrabold mt-6 mb-6 text-slate-900 leading-tight">Cantik Sesuai <span class="text-pink-500 italic">Dirimu.</span></h2>
+            <p class="text-slate-500 max-w-xl mx-auto text-lg mb-10">Katalog hijab premium dengan fitur rekomendasi pintar untuk menonjolkan pesona unik wajahmu.</p>
+            <a href="#rekomendasi" class="bg-pink-600 text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-pink-200 hover:bg-pink-700 transition transform hover:-translate-y-1 inline-block">Mulai Cari Gaya</a>
+        </div>
+    </header>
+
+    <section id="katalog" class="container mx-auto py-24 px-4">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-bold mb-4">Koleksi Signature</h3>
+            <p class="text-slate-500 italic font-medium">Klik produk untuk detail dan ulasan pelanggan</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div onclick="openModal('Hijab Sport', 'Material jersey premium yang ringan dan menyerap keringat. Potongan ergonomis, tidak licin, dan sangat nyaman untuk workout.', 'Rp 40.000', 'Gak geser sama sekali pas lari pagi! - Sarah', 'images/hijab-sport.jpeg')" class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl mb-6 overflow-hidden shadow-md bg-slate-200 border-4 border-white">
+                    <img src="images/hijab-sport.jpeg" alt="Hijab Sport" class="w-full h-full object-cover transition duration-500">
+                </div>
+                <h4 class="font-bold text-lg">Hijab Sport</h4>
+                <p class="text-pink-600 font-bold">Rp 40.000</p>
+            </div>
+
+            <div onclick="openModal('Hijab Segi Empat Voal', 'Bahan Voal Ultrafine yang terkenal sangat tegak di dahi dan lembut. Mudah dibentuk tanpa perlu disetrika berlebihan.', 'Rp 35.000', 'Warna pastelnya cantik dan beneran tegak di dahi! - Rini', 'images/segiempat-voal.jpeg')" class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl mb-6 overflow-hidden shadow-md bg-slate-200 border-4 border-white">
+                    <img src="images/segiempat-voal.jpeg" alt="Segi Empat Voal" class="w-full h-full object-cover transition duration-500">
+                </div>
+                <h4 class="font-bold text-lg">Hijab Segi Empat Voal</h4>
+                <p class="text-pink-600 font-bold">Rp 35.000</p>
+            </div>
+
+            <div onclick="openModal('Hijab Pashmina Viscose', 'Tekstur serat alami yang jatuh (flowy) dan memberikan kesan mewah. Bahan adem dan tidak licin.', 'Rp 45.000', 'Mewah banget pas dipake ke acara kondangan. - Linda', 'images/pashmina-viscose.jpeg')" class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl mb-6 overflow-hidden shadow-md bg-slate-200 border-4 border-white">
+                    <img src="images/pashmina-viscose.jpeg" alt="Pashmina Viscose" class="w-full h-full object-cover transition duration-500">
+                </div>
+                <h4 class="font-bold text-lg">Hijab Pashmina Viscose</h4>
+                <p class="text-pink-600 font-bold">Rp 45.000</p>
+            </div>
+
+            <div onclick="openModal('Hijab Pashmina Ceruty', 'Bahan Ceruty Baby Doll original. Tekstur berpasir halus yang elegan dan sangat cantik untuk layering.', 'Rp 42.000', 'Pashmina ternyaman, koleksi warnanya lengkap. - Bella', 'images/pashmina-ceruty.jpeg')" class="product-card group cursor-pointer">
+                <div class="aspect-[3/4] rounded-3xl mb-6 overflow-hidden shadow-md bg-slate-200 border-4 border-white">
+                    <img src="images/pashmina-ceruty.jpeg" alt="Pashmina Ceruty" class="w-full h-full object-cover transition duration-500">
+                </div>
+                <h4 class="font-bold text-lg">Hijab Pashmina Ceruty</h4>
+                <p class="text-pink-600 font-bold">Rp 42.000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rekomendasi" class="bg-slate-900 text-white py-24 px-4">
+        <div class="container mx-auto max-w-4xl bg-slate-800 p-10 md:p-16 rounded-[3rem] border border-slate-700 shadow-2xl">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4 italic">Smart Style Guide</h3>
+                <p class="text-slate-400">Temukan kombinasi sempurna berdasarkan bentuk wajah dan undertone-mu.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <label class="block mb-3 font-semibold text-pink-300 italic">Cek Warna Nadimu (Undertone)</label>
+                    <select id="undertone" class="w-full p-4 rounded-2xl bg-slate-700 text-white outline-none border-2 border-transparent focus:border-pink-500 transition">
+                        <option value="cool">Biru/Ungu (Cool)</option>
+                        <option value="warm">Hijau (Warm)</option>
+                        <option value="neutral">Keduanya (Neutral)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-3 font-semibold text-pink-300 italic">Apa Bentuk Wajahmu?</label>
+                    <select id="faceshape" class="w-full p-4 rounded-2xl bg-slate-700 text-white outline-none border-2 border-transparent focus:border-pink-500 transition">
+                        <option value="bulat">Bulat</option>
+                        <option value="oval">Oval</option>
+                        <option value="kotak">Kotak/Square</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="prosesRekomendasi()" class="w-full mt-10 bg-pink-600 hover:bg-pink-700 py-4 rounded-2xl font-bold text-xl transition-all shadow-lg shadow-pink-500/20">Dapatkan Saran Produk</button>
+
+            <div id="hasilGabungan" class="hidden mt-10 p-8 bg-white rounded-3xl text-slate-900 animate-fade">
+                <h4 class="text-2xl font-bold text-pink-600 mb-3 italic">✨ Heavenly Recommendation:</h4>
+                <p id="teksHasil" class="text-lg leading-relaxed mb-6"></p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <button onclick="document.getElementById('katalog').scrollIntoView()" class="bg-slate-100 px-6 py-3 rounded-xl font-bold hover:bg-slate-200 transition">Cek di Katalog</button>
+                    <a id="waLink" href="#" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-xl font-bold text-center hover:bg-green-600 transition flex items-center justify-center gap-2">
+                        Pesan via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edukasi" class="container mx-auto py-24 px-4">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-bold mb-4">Tutorial & Edukasi</h3>
+            <p class="text-slate-500">Tampil stylish dalam hitungan menit dengan panduan berikut.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100 p-4">
+                <div class="aspect-video rounded-[1.8rem] overflow-hidden mb-6 shadow-inner">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/H2ev9kX3CYA" title="Tutorial Pashmina Viscose" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="px-2 pb-2">
+                    <h4 class="font-bold text-xl mb-2">Style Pashmina Viscose ala Gen-Z</h4>
+                    <p class="text-slate-600 text-sm">Gaya pashmina modern yang clean dan trendy untuk daily maupun hangout.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100 p-4">
+                <div class="aspect-video rounded-[1.8rem] overflow-hidden mb-6 shadow-inner">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/-SkMvc0muLY" title="Tutorial Segi Empat" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="px-2 pb-2">
+                    <h4 class="font-bold text-xl mb-2">Tutorial Segi Empat Simple</h4>
+                    <p class="text-slate-600 text-sm">8 cara mengikat hijab segi empat untuk kerja, wisuda, hingga kondangan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-100 py-12 text-center text-slate-400">
+        <p class="font-bold text-slate-800 mb-2 tracking-widest uppercase text-sm">Heavenly Wear</p>
+        <p class="text-xs">&copy; 2026 Heavenly Wear. All Rights Reserved.</p>
+    </footer>
+
+    <div id="productModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm hidden z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-[2.5rem] max-w-4xl w-full flex flex-col md:flex-row overflow-hidden relative shadow-2xl transition-all">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-3xl">&times;</button>
+            <div class="md:w-1/2 h-72 md:h-auto bg-slate-200">
+                <img id="modalImage" src="" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-10 flex flex-col justify-center">
+                <h2 id="modalTitle" class="text-3xl font-bold mb-2"></h2>
+                <p id="modalPrice" class="text-pink-600 text-2xl font-extrabold mb-6"></p>
+                <div class="space-y-4 border-t pt-6">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Deskripsi</span>
+                        <p id="modalDesc" class="text-slate-600 mt-1"></p>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Ulasan Pelanggan</span>
+                        <p id="modalReview" class="text-slate-500 italic mt-1 bg-pink-50 p-3 rounded-xl border border-pink-100"></p>
+                    </div>
+                    <button class="w-full bg-pink-600 text-white py-4 rounded-2xl font-bold hover:bg-pink-700 transition">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, desc, price, review, image) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalReview').innerText = `"${review}"`;
+            document.getElementById('modalImage').src = image;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        function prosesRekomendasi() {
+            const undertone = document.getElementById('undertone').value;
+            const face = document.getElementById('faceshape').value;
+            const container = document.getElementById('hasilGabungan');
+            const teksHasil = document.getElementById('teksHasil');
+            const waLink = document.getElementById('waLink');
+
+            let jenis = "";
+            let warna = "";
+
+            if (face === 'bulat') jenis = "Pashmina Ceruty (membantu memberi dimensi pada wajah)";
+            else if (face === 'oval') jenis = "Segi Empat Voal (menonjolkan bentuk wajah simetrismu)";
+            else jenis = "Pashmina Viscose (bahannya yang flowy melembutkan garis rahang)";
+
+            if (undertone === 'cool') warna = "Cool Tones seperti Dusty Pink, Silver, atau Navy";
+            else if (undertone === 'warm') warna = "Warm Tones seperti Mustard, Teracotta, atau Olive";
+            else warna = "Warna Netral seperti Beige, Khaki, atau Hitam";
+
+            teksHasil.innerHTML = `Kamu akan tampil sempurna dengan <strong>${jenis}</strong> dalam palet <strong>${warna}</strong>.`;
+            
+            // Ganti nomor WA berikut dengan nomor Anda
+            const nomorWA = "62812345678"; 
+            const pesanWA = `Halo Heavenly Wear! Saya ingin pesan hijab sesuai hasil rekomendasi: ${jenis} dengan warna dari palet ${warna}.`;
+            waLink.href = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesanWA)}`;
+
+            container.classList.remove('hidden');
+            container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
